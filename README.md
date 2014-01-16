@@ -9,7 +9,7 @@ Requirements.
 
 ## Initialize local database
 
-Create a database. Can be named anything but you'll reference it later in `.secrets.json`. In this example we'll use *db.sqlite*.
+Create a database named db.sqlite.
 ```sh
 sqlite3 db.sqlite
 sqlite> .load db.sql
