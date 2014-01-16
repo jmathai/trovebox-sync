@@ -9,7 +9,7 @@ Requirements.
 
 ## Initialize local database
 
-Create a database named db.sqlite.
+Create a database named *db.sqlite*.
 ```sh
 sqlite3 db.sqlite
 sqlite> .load db.sql
