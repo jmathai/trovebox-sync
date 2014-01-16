@@ -61,9 +61,11 @@ while(true)
         continue;
       }
 
-      $stmt = $db->prepare('INSERT INTO `meta`(`id`,`data`) VALUES(:id, :data)');
+      $json = json_encode($photo);
+      $stmt = $db->prepare('INSERT INTO `meta`(`id`,`data`,`hash`) VALUES(:id, :data, :hash)');
       $stmt->bindValue(':id', $ident);
-      $stmt->bindValue(':data', json_encode($photo));
+      $stmt->bindValue(':data', $json);
+      $stmt->bindValue(':hash', sha1($json));
       $result = $stmt->execute();
       if($result)
       {
