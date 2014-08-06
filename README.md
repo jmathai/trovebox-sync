@@ -7,6 +7,15 @@ Requirements.
   * PHP 5.3
   * Sqlite3
 
+## Git submodules
+
+Make sure you update the submodules
+```php
+git submodule init
+git submodule update
+```
+
+
 ## Initialize local database
 
 Create a database named *db.sqlite*.
